@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D playerBody;
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform startPosition;
+    [SerializeField] private Camera camera;
+    private Vector3 target;
  
 
     private Vector2 direction = new Vector2(1,0);
@@ -27,6 +29,8 @@ public class Player : MonoBehaviour
        {
            Shot();
        }
+
+        
     }
 
     void FixedUpdate() 
@@ -47,7 +51,18 @@ public class Player : MonoBehaviour
 
     void Shot()
     {
-        Bullet bullet = Instantiate(bulletPrefab, startPosition);
+        target = camera.ScreenToWorldPoint(Input.mousePosition);
+
+        float xRotation = target.x - startPosition.transform.position.x;
+        float yRotation = target.y - startPosition.transform.position.y;
+
+        // float angle = Mathf.Atan2(yRotation, xRotation) * Mathf.Rad2Deg;
+
+        // startPosition.rotation = Quaternion.Euler(0f,0f, angle);
+
+        direction = new Vector2(xRotation,yRotation);
+
+        Bullet bullet = Instantiate(bulletPrefab, startPosition.transform.position,Quaternion.identity);
         bullet.gameObject.transform.position = startPosition.transform.position;
         bullet.SetImpulse(bulletForce,direction,gameObject);
     }
