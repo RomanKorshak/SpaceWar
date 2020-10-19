@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D playerBody;
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform startPosition;
+ 
+
     private Vector2 direction = new Vector2(1,0);
 
     public Transform StartPosition
@@ -47,7 +49,7 @@ public class Player : MonoBehaviour
     {
         Bullet bullet = Instantiate(bulletPrefab, startPosition);
         bullet.gameObject.transform.position = startPosition.transform.position;
-        bullet.SetImpulse(bulletForce,direction,startPosition.gameObject);
+        bullet.SetImpulse(bulletForce,direction,gameObject);
     }
 
 

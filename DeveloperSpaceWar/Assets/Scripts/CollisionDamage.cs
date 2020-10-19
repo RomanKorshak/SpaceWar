@@ -5,10 +5,13 @@ using UnityEngine;
 public class CollisionDamage : MonoBehaviour
 {
     [SerializeField] private int damage;
+    
+    
 
 
-    void OnCollisionExit2D(Collision2D other) 
+    void OnCollisionEnter2D(Collision2D other) 
     {
-        Debug.Log(other.gameObject.name);    
+          
+       
     }
 }

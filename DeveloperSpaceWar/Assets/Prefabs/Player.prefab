@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1072833961}
   - component: {fileID: 147577268}
   - component: {fileID: -13924538027498925}
+  - component: {fileID: 431983265}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -152,7 +153,8 @@ MonoBehaviour:
   speed: 5
   bulletForce: 10
   playerBody: {fileID: 1072833960}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 7895829884857714870, guid: 22c8fe46215600e4897f1b9e1fdcafc7,
+    type: 3}
   startPosition: {fileID: 5535145253087373532}
 --- !u!60 &147577268
 PolygonCollider2D:
@@ -197,4 +199,18 @@ MonoBehaviour:
   bulletRigidBody: {fileID: 1048655700144080445, guid: 22c8fe46215600e4897f1b9e1fdcafc7,
     type: 3}
   lifeTime: 3
-  collisionDamage: {fileID: 0}
+  collisionDamage: {fileID: -2097802394777350475, guid: 22c8fe46215600e4897f1b9e1fdcafc7,
+    type: 3}
+--- !u!114 &431983265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8786216057824042114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba27fcf1a160045a4329dd934b4528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100

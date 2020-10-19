@@ -121,25 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &431983264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8786216057824042114, guid: 5310c2ec9a59cc7489f3de5ad127fa8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8646137498501900451}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &431983265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431983264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ba27fcf1a160045a4329dd934b4528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,25 +204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &660339396 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2749954362156076571, guid: 84fed5b11d7fc824bbc27c9cdd5ba050,
-    type: 3}
-  m_PrefabInstance: {fileID: 2749954361730970847}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &660339397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660339396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ba27fcf1a160045a4329dd934b4528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
 --- !u!1001 &2749954361730970847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -304,6 +266,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2749954362156076566, guid: 84fed5b11d7fc824bbc27c9cdd5ba050,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2749954362156076571, guid: 84fed5b11d7fc824bbc27c9cdd5ba050,
         type: 3}
       propertyPath: m_Name
@@ -318,6 +285,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5535145253087373532, guid: 5310c2ec9a59cc7489f3de5ad127fa8c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.61
+      objectReference: {fileID: 0}
     - target: {fileID: 5643423500152505969, guid: 5310c2ec9a59cc7489f3de5ad127fa8c,
         type: 3}
       propertyPath: m_LocalPosition.x
