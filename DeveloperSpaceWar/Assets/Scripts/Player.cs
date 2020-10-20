@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
 
         Bullet bullet = Instantiate(bulletPrefab, startPosition.transform.position,Quaternion.identity);
         bullet.gameObject.transform.position = startPosition.transform.position;
-        bullet.SetImpulse(bulletForce,direction,gameObject);
+        bullet.SetImpulse(bulletForce,direction,this.gameObject);
     }
 
 

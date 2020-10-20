@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform startPosition;
@@ -10,7 +10,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private TurnTarget target;
     [SerializeField] private float bulletForce;
     private bool isShooting = false;
-    private bool isTarget = false;
+    
     
 
     void Update() 
@@ -19,26 +19,9 @@ public class Turret : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            isTarget = true;
-           
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other) 
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            isTarget = false;
-        }    
-    }
-
     void Shot()
     {
-        if(isTarget && !isShooting)
+        if(target.isTarget && !isShooting)
         {
             var bullet = Instantiate(bulletPrefab,startPosition.transform.position, Quaternion.identity);
             bullet.SetImpulse(bulletForce,new Vector2(target.xRotation, target.yRotation),this.gameObject);

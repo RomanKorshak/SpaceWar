@@ -8,6 +8,22 @@ public class TurnTarget : MonoBehaviour
     public float xRotation;
     public float yRotation;
 
+    [SerializeField] private Enemy enemy;
+    public bool isTarget {get;set;} 
+
+    void Start() 
+    {
+        isTarget = false;    
+    }
+
+    void OnTriggerExit2D(Collider2D other) 
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            isTarget = false;
+        }    
+    }
+
     void OnTriggerStay2D(Collider2D other) 
     {
         if(other.gameObject.CompareTag("Player"))
@@ -17,7 +33,12 @@ public class TurnTarget : MonoBehaviour
 
             float direction = Mathf.Atan2(yRotation, xRotation) * Mathf.Rad2Deg;
 
-            transform.rotation = Quaternion.Euler(0f,0f,direction);
+            enemy.gameObject.transform.rotation = Quaternion.Euler(0f,0f,direction);
+
+            if(other.gameObject.CompareTag("Player"))
+            {
+                isTarget = true;
+            }
         }
         
     }

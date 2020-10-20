@@ -6,15 +6,6 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D bulletRigidBody;
     [SerializeField] private int lifeTime;
-    // // [SerializeField] private CollisionDamage collisionDamage;
-    // public CollisionDamage ColDamage
-    // {
-    //     get => collisionDamage;
-    //     set
-    //     {
-    //         collisionDamage = value;
-    //     }
-    // }
     
     public GameObject parent { get; set; }
 
