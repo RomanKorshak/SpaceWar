@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8218656936558682591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.58, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 851d38d26ef4e2d40bdbcd5c90e17c61, type: 3}
-  m_Color: {r: 0.5566038, g: 0.13915095, b: 0.13915095, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2504736c342f9be4ca01ef0bd9c0ed8b, type: 3}
+  m_Color: {r: 0.9811321, g: 0.93948025, b: 0.93948025, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,8 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a871be077d81947a925af7b5e3dfc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  tag: Enemy
+  damage: 1
 --- !u!58 &4367549872188253901
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,6 +146,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.16292426}
+  m_Offset: {x: 0, y: 0.039545726}
   serializedVersion: 2
-  m_Radius: 0.46974456
+  m_Radius: 0.18871479

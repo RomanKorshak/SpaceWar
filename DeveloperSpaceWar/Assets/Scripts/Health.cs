@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health;
+    [SerializeField] private DestroyEffect particleEffect;
     
     public int HealthG
     {
@@ -22,10 +23,22 @@ public class Health : MonoBehaviour
 
     public void Hit(int damage)
     {
+        if(Player.Instance.isGod && gameObject == Player.Instance.gameObject)
+        {
+            return;
+        }
         health -= damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            if(particleEffect != null)
+            {
+                StartCoroutine(particleEffect.DestroyEffectCoroutine(gameObject));
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 }

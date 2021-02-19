@@ -7,6 +7,11 @@ TagManager:
   - Turret
   - Enemy
   - Radar
+  - Bullet
+  - BonusBox
+  - Coin
+  - Shield
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -43,4 +48,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1398126873
+    locked: 0
+  - name: Middleground
+    uniqueID: 3606547109
+    locked: 0
+  - name: Foreground
+    uniqueID: 918171299
     locked: 0

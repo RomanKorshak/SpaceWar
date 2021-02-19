@@ -1,2 +1,4 @@
-# SpaceWar
-A space War game
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+

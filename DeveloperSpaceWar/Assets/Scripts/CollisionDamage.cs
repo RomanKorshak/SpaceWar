@@ -6,6 +6,14 @@ public class CollisionDamage : MonoBehaviour
 {
     [SerializeField] private int damage;
 
+    public int Damage
+    {
+        get => damage;
+        set
+        {
+            damage = value;
+        }
+    }
     
     
     void OnTriggerEnter2D(Collider2D other)
@@ -17,7 +25,17 @@ public class CollisionDamage : MonoBehaviour
             return;
         }
 
+        if(GetComponent<Bullet>() == null)
+        {
+            return;
+        }
+        
         if(GetComponent<Bullet>().parent == other.gameObject)
+        {
+            return;
+        }
+
+        if(other.gameObject.CompareTag("Player") && Player.Instance.isGod)
         {
             return;
         }
